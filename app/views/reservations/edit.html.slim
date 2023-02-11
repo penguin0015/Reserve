@@ -1,0 +1,28 @@
+h1 予約者情報の編集
+
+.nav.justify-content-end
+  = link_to '予約表へ', reservations_path, class: 'nav-link'
+
+= form_with model: @reservation, local: true do |f|
+  .form-group
+    = f.label :date
+    = f.text_field :date, class: 'form-control', id: 'reservation_date'
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control', id: 'reservation_name'
+  .form-group
+    = f.label :table
+    = f.text_field :table, class: 'form-control', id: 'reservation_table'
+  .form-group
+    = f.label :number
+    = f.text_field :number, class: 'form-control', id: 'reservation_number'
+  .form-group
+    = f.label :time
+    = f.text_field :time, class: 'form-control', id: 'reservation_time'
+  .form-group
+    = f.label :tel
+    = f.text_field :tel, class: 'form-control', id: 'reservation_tel'
+  .form-group
+    = f.label :description
+    = f.text_area :description, rows: 5, class: 'form-control', id: 'reservation_description'
+  = f.submit nil, class: 'btn btn-primary'

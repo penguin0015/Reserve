@@ -1,0 +1,69 @@
+@import "Bootstrap";
+
+.simple-calendar {
+    .day {}
+    .wday-0:hover{
+        background: #98fb98;
+    }
+    .wday-1:hover {
+        background: #98fb98;
+    }
+    .wday-2:hover {
+        background: #98fb98;
+    }
+    .wday-3:hover {
+        background: #98fb98;
+    }
+    .wday-4:hover {
+        background: #98fb98;
+    }
+    .wday-5:hover {
+        background: #98fb98;
+    }
+    .wday-6:hover {
+        background: #98fb98;
+    }
+    .today:hover{
+        background: #98fb98;
+    }
+    .past {}
+    .future {}
+    .start-date {}
+    .prev-month {}
+    .next-month { }
+    .current-month {}
+    .has-events {
+      //background: #98fb98;
+    }
+}
+
+.table_new{
+}
+.th_new{
+    border:  solid 1px;
+    width: 15rem;
+    height: 2rem;
+    background-color: yellow;
+}
+.tr_new{
+    border: solid 1px;
+    width: 15rem;
+    height: 2rem;
+}
+.td_new{
+    text-align: center;
+    border: solid 1px;
+    width: 15rem;
+    height: 2rem;
+}
+#time{
+    text-align: center;
+    background-color: yellow;
+}
+#table{
+    text-align: center;
+    background-color: grey;
+}
+#pointer:hover{
+    background: #98fb98;
+}

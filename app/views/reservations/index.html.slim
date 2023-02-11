@@ -1,0 +1,33 @@
+h1 予約表
+//- reservations = Table.reservations
+br
+br
+
+p= @day
+
+table.table_new 
+  tr.tr_new
+    th.th_new#time 時間
+    - tables.each_key do |table|
+      th.th_new#table = table
+  - times.each do |time|
+    tr.tr_new
+      td.td_new#time= time
+      - tables.each do |table|
+        td.td_new#pointer= link_to '空席', new_reservation_path(day: @day)
+
+.mb-3
+table.table.table-hover
+  thread.thread-default
+    tr
+      th= Reservation.human_attribute_name(:name)
+      th= Reservation.human_attribute_name(:created_at)
+      th
+    tbody 
+      - @reservations.each do |reservation|
+        tr
+          td= link_to reservation.name , reservation
+          td= reservation.created_at
+          td
+            = link_to '編集', edit_reservation_path(reservation), class:'btn btn-primary mr-3'
+            = button_to '削除', reservation, method: :delete, class:'btn btn-danger'

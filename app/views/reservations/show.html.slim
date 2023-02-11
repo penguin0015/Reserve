@@ -1,0 +1,38 @@
+h1 予約の詳細
+
+.nav.justify-content-end
+  = link_to '予約表へ', reservations_path, class: 'nav-link'
+table.tabel.table-hover
+  tbody
+    tr 
+      th= Reservation.human_attribute_name(:date)
+      td= @reservation.date 
+    tr 
+      th= Reservation.human_attribute_name(:id)
+      td= @reservation.id
+    tr 
+      th= Reservation.human_attribute_name(:name)
+      td= @reservation.name
+    tr 
+      th= Reservation.human_attribute_name(:table)
+      td= @reservation.table
+    tr 
+      th= Reservation.human_attribute_name(:number)
+      td= @reservation.number
+    tr
+      th= Reservation.human_attribute_name(:time)
+      td= @reservation.time
+    tr 
+      th= Reservation.human_attribute_name(:tel)
+      td= @reservation.tel
+    tr 
+      th= Reservation.human_attribute_name(:description)
+      td= @reservation.description
+    tr 
+      th= Reservation.human_attribute_name(:created_at)
+      td= @reservation.created_at
+    tr 
+      th= Reservation.human_attribute_name(:updated_at)
+      td= @reservation.updated_at
+
+= link_to '編集', edit_reservation_path, class:'btn btn-primary mr-3'

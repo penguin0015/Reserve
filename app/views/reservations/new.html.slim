@@ -1,0 +1,6 @@
+h1 予約の新規登録
+p=  @day
+.nav.justify-content-end 
+  = link_to '予約表へ', reservations_path, class: 'nav-link'
+
+= render partial: 'form', locals:  {reservation: @reservation}
